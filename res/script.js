@@ -5,7 +5,6 @@ let timeOut = "";
 let ken = document.getElementById("ninja-ken");
 
 let splashScreen = document.getElementsByClassName("splash")[0];
-let startGame = document.getElementsByClassName("start")[0];
 let displaySkorKen = document.getElementsByClassName("skor-ken")[0];
 let displaySkorPlayer = document.getElementsByClassName("skor-player")[0];
 
@@ -23,11 +22,6 @@ if (localStorage.getItem("skorPlayer")) {
     skorPlayer = localStorage.getItem("skorPlayer");
     displaySkorPlayer.innerHTML = skorPlayer;
 }
-
-startGame.addEventListener("click", () => {
-    splashScreen.style.top = "-120vh";
-    splashScreen.style.transition = ".75s";
-});
 
 batu.addEventListener("click", () => {
     janken(0);
